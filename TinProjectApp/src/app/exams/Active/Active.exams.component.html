@@ -1,0 +1,40 @@
+<table>
+    <thead>
+        <tr>
+            <th>
+                <input type="checkbox" id="inputHeader" name="inputHeader">
+            </th>
+            <th>
+                Title
+            </th>
+            <th>
+                Time
+            </th>
+            <th>
+                Creation date
+            </th>
+            <th>
+                Points
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let exam of exams; let i = index;">
+            <td>
+                <input type="checkbox" id="{{i}}" name="">
+            </td>
+            <td>
+                {{exam.title}}
+            </td>
+            <td>
+                {{exam.time}}
+            </td>
+            <td>
+                {{exam.creationDate | date:'mediumDate'}}
+            </td>
+            <td>
+                {{exam.maxPoints}}
+            </td>
+        </tr>
+    </tbody>
+</table>

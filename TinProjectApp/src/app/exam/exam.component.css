@@ -1,0 +1,352 @@
+.examContainer{
+    width: 80%;
+    margin: auto;
+}
+
+.questionListContainer {
+    float: left;
+    width: 30%;
+    height: 500px;
+    background-color: #e5e5e5;
+    border-radius: 10px;
+}
+
+.questionListHeader {
+    padding: 20px;
+}
+
+.questionInscription {
+    float: left;
+    font-size: medium;
+    font-weight: 500;
+    margin-right: 20px;
+}
+
+.numberOfQuestions {
+    float: left;
+    font-size: medium;
+}
+
+.questionListBody {
+    clear: both;
+    min-height: 380px;
+    height: 380px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    height: 50px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}
+
+.question {
+    width: 100%;
+    height: 20px;
+    margin-top: 10px;
+}
+
+.questionNumber {
+    float: left;
+    min-width: 20px;
+    border-radius: 100px;
+    background-color: #c4c4c4;
+    color: white;
+    text-align: center;
+    font-weight: 500;
+}
+
+.questionNumber:hover {
+    background-color: red;
+}
+
+.questionShortTitle {
+    float: left;
+    padding-left: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.questionTitle {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.questionPoints {
+    float: right;
+}
+
+.questionPointsInput {
+    border: none;
+    max-width: 20px;
+}
+
+/* Chrome, Safari, Edge, Opera  Hide arrows*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox Hide arrows*/
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.pointsShort {
+    float: right;
+    color: #c4c4c4;
+}
+
+.questionListFooter {
+    height: 60px;
+    border-radius: 10px;
+}
+
+.addQuestionButton {
+    width: 100%;
+    height: 60px;
+    background-color: yellow;
+    border-radius: 0px 0px 10px 10px;
+    border-color: transparent;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.questionAndAnswerContainer {
+    float: right;
+    width: 65%;
+    height: 500px;
+}
+
+.questionContainer {
+    height: 130px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    background-color: white;
+    padding: 20px;
+}
+
+.questionTitleContainer {
+    height: 30px;
+    margin-bottom: 20px;
+}
+
+.questionTitleNumberConainer {
+    float: left;
+    margin-right: 10px;
+    float: left;
+    min-width: 20px;
+    border-radius: 100px;
+    background-color: #c4c4c4;
+    color: white;
+    text-align: center;
+    font-weight: 500;
+}
+
+.questionTitle {
+    float: left;
+    width: 80%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.titleInput {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+input:focus {
+    outline: none;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+.questionContent {
+    clear: both;
+    width: 100%;
+    height: 90px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.questionContentInput {
+    height: 80px;
+    font-size: large;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    overflow-y: auto;
+}
+
+.questionContentInput:focus {
+    outline: none;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.answersContainer {
+    height: 274px;
+    border-radius: 10px;
+    background-color: white;
+    padding: 6px 20px 20px 20px;
+}
+
+.answersTabs {
+    height: 240px;
+}
+
+.answerContainer {
+    width: 100%;
+    height: 30px;
+}
+
+:host ::ng-deep .mat-tab-header {
+    margin-bottom: 10px;
+}
+
+.isAnswerCorrect {
+    float: left;
+    width: 5%;
+    height: 30px;
+}
+
+.isCorrectAnswerCheckBox {
+    height: 30px;
+    width: 100%;
+    border: none;
+}
+
+.answer {
+    float: left;
+    width: 95%;
+}
+
+.answerInput {
+    padding-left: 10px;
+    font-size: large;
+    width: 95%;
+    background-color: transparent;
+    border: none;
+    overflow-y: auto;
+}
+
+.answersFooter {
+    height: 20px;
+}
+
+.questionDescriptionInput {
+    margin-top: 20px;
+    padding-right: 10px;
+    height: 140px;
+    font-size: large;
+    width: 95%;
+    background-color: transparent;
+    border: none;
+    overflow-y: auto;
+}
+
+.checkmark {
+    height: 80%;
+    margin: auto;
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    
+  }
+  
+  /* Hide the browser's default checkbox */
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  /* Create a custom checkbox */
+  .checkmark {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    height: 20px;
+    width: 20px;
+    background-color: grey;
+    border-radius: 15px;
+  }
+  
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: green;
+  }
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the checkmark when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the checkmark/indicator */
+  .container .checkmark:after {
+    left: 6px;
+    top: 3px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+    
+/* ink bar */
+::ng-deep .mat-ink-bar {
+    background-color: var(--primary-color,#1F89CE) !important;
+}
+
+::ng-deep .mat-tab-label .mat-tab-label-content {
+    font-size: 12px;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 3px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }

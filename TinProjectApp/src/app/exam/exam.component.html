@@ -1,0 +1,102 @@
+<div class="examContainer" id="examContainer">
+    <div class="add-question-form" [formGroup]="form">
+        <ng-container formArrayName="questions">
+            <div class="questionListContainer" id="QuestionListContainer">
+                <div class="questionListHeader" id="QuestionListHeader">
+                    <div class="questionInscription" id="QuestionInscription">Questions</div>
+                    <div class="numberOfQuestions" id="NumberOfQuestions">{{questions.length}}</div>
+                </div>
+                <div class="questionListBody" id="QuestionListBody">
+                    <ng-container *ngFor="let questionForm of questions.controls; let i=index">
+                        <div class="question" id="question{{i}}" (click)="setActualIndex(i-1)">
+                            <div class="questionNumber" title="remove question" (click)="removeQuestion(i)">{{i+1}}</div>
+                            <div class="questionShortTitle" maxlength="20">{{questions.controls[i]?.get("title")?.value}}</div>
+                        </div>
+                    </ng-container>
+                </div>
+                <div class="questionListFooter" id="QuestionListFooter">
+                    <div class="addQuestionContainer" id="AddQuestionContainer">
+                        <button class="addQuestionButton" id="addQuestionButton" (click)="addQuestion()">add Question</button>
+                    </div>
+                </div>
+            </div>
+            <ng-container *ngFor="let question of questions.controls; index as i">
+                <div class="question-form-row" *ngIf="i === actualIndex + 1" [formGroupName]="i">
+                    <div class="questionAndAnswerContainer" id="QuestionAndAnswerContainer">
+                        <div class="questionContainer" id="QuestionContainer">
+                            <div class="questionTitleContainer" id="QuestionTitleContainer">
+                                <div class="questionTitleNumberConainer" id="QuestionTitleNumberConainer">{{i+1}}</div>
+                                <div class="questionTitle" id="QuestionTitle">
+                                    <input type="text" class="titleInput" formControlName="title" placeholder="Enter question title" maxlength="40"/>
+                                </div>
+                                <div class="questionPoints" id="questionPoints">
+                                    <input type="number" class="questionPointsInput" formControlName="points" placeholder="0" min="1" max="100" step=".01">
+                                    <div class="pointsShort">pts</div>
+                                </div>
+                            </div>
+                            <div class="questionContent" id="QuestionContext">
+                                <textarea class="questionContentInput" formControlName="questionContent" placeholder="Enter question content"></textarea>
+                            </div>
+                        </div>
+                        <div class="answersContainer" id="AnswersContainer">
+                            <mat-tab-group dynamicHeight [disableRipple]="true" mat-align-tabs="start" class="answersTabs">
+                                <mat-tab label="Answers" class="answers">
+                                    <div class="answerContainer" id="FirstAnswerContainer">
+                                        <div class="isAnswerCorrect" id="IsFirstAnswerCorrect">
+                                            <label class="container">
+                                                <input class="isCorrectAnswerCheckBox" type="checkbox" formControlName="isCorrectAnswer1">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <div class="answer" id="FirstAnswer">
+                                            <textarea class="answerInput" formControlName="answer1" placeholder="Enter answer"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="answerContainer" id="SecondAnswerContainer">
+                                        <div class="isAnswerCorrect" id="IsSecondAnswerCorrect">
+                                            <label class="container">
+                                                <input class="isCorrectAnswerCheckBox" type="checkbox" formControlName="isCorrectAnswer2">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <div class="answer" id="SecondAnswer">
+                                            <textarea class="answerInput" formControlName="answer2" placeholder="Enter answer"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="answerContainer" id="ThirdAnswerContainer">
+                                        <div class="isAnswerCorrect" id="IsThirdAnswerCorrect">
+                                            <label class="container">
+                                                <input class="isCorrectAnswerCheckBox" type="checkbox" formControlName="isCorrectAnswer3">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <div class="answer" id="ThirdAnswer">
+                                            <textarea class="answerInput" formControlName="answer3" placeholder="Enter answer"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="answerContainer" id="FourthAnswerContainer">
+                                        <div class="isAnswerCorrect" id="IsFourthAnswerCorrect">
+                                            <label class="container">
+                                                <input class="isCorrectAnswerCheckBox" type="checkbox" formControlName="isCorrectAnswer4">
+                                                <span class="checkmark"></span>
+                                            </label>
+                                        </div>
+                                        <div class="answer" id="FourthAnswer">
+                                            <textarea class="answerInput" formControlName="answer4" placeholder="Enter answer"></textarea>
+                                        </div>
+                                    </div>
+                                </mat-tab>
+                                <mat-tab label="Suggestions">
+                                    <textarea class="questionDescriptionInput" formControlName="description" placeholder="Enter suggestions"></textarea>
+                                </mat-tab>
+                            </mat-tab-group>
+                            <div class="answersFooter" id="AnswersFooter">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </ng-container>
+        </ng-container>
+    </div>
+</div>

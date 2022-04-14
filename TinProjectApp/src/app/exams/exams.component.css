@@ -1,0 +1,104 @@
+.examsContainer {
+    width: 80%;
+    margin: auto;
+    background-color: #f6f7f8
+}
+
+.examListHeader {
+    display: flex;
+    width: 96%;
+    margin: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.examListInscription {
+    float: left;
+    width: 50%;
+    content: "elo";
+    font-size: 40px;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.createExamContainer {
+    width: 50%;
+    float: right;
+    text-align: right;
+}
+
+.createExamButton {
+    width: 25%;
+    height: 100%;
+    background-color: #3c54b4;
+    color: white;
+    padding: 15px;
+    font-size: medium;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px;
+}
+
+.examsStats {
+    clear: both;
+    display: flex;
+    justify-content: space-between;
+    width: 96%;
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+.examsStat {
+    float: left;
+    width: 20%;
+    padding: 20px;
+    border-radius: 5px;
+    border: 2px solid #bec4cc;
+    background-color: white;
+}
+
+.statContent {
+    float: left;
+    width: 50%;
+}
+
+.statName {
+    color: grey;
+    font-weight: 500;
+    font-size: medium;
+    margin-bottom: 10px;
+    white-space: nowrap;
+}
+
+.actualStat {
+    padding-left: 5px;
+    font-size: x-large;
+    font-weight: 500;
+}
+
+.statImage {
+    float: right;
+    width: 50%;
+    height: 50px;
+    background-size: cover;
+}
+
+.examNavigation {
+    height: auto;
+    overflow: hidden;
+    width: 100%;
+}
+
+.examGroups {
+    width: 100%;
+}
+
+.mat-tab-header {
+    width: 96%;
+    margin: auto;
+}
+
+.mat-tab-label {
+    font-size: 18px;
+}

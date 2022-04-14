@@ -1,0 +1,50 @@
+<div class="examsContainer" id="ExamsContainer">
+    <div class="examListHeader" id="ExamListHeader">
+        <div class="examListInscription" id="ExamListInscription">Exam list</div>
+        <div class="createExamContainer" id="CreateExamContainer">
+                <button type="button" class="createExamButton" href="/exam-component">Create exam</button>  
+        </div>
+    </div>
+    <div class="examsStats" id="ExamsStats">
+        <div class="examsStat" id="ExamsStat">
+            <div class="statContent" id="StatContent">
+                <div class="statName" id="StatName">Created Exams</div>
+                <div class="actualStat" id="ActualStat">74</div>
+            </div>
+            <div class="statImage" id="statImage" style='background-image: url("../../assets/img/stat.png");'></div>
+        </div>
+        <div class="examsStat" id="ExamsStat">
+            <div class="statContent" id="StatContent">
+                <div class="statName" id="StatName">Average score</div>
+                <div class="actualStat" id="ActualStat">67 %</div>
+            </div>
+            <div class="statImage" id="statImage" style='background-image: url("../../assets/img/stat2.png");'></div>
+        </div>
+        <div class="examsStat" id="ExamsStat">
+            <div class="statContent" id="StatContent">
+                <div class="statName" id="StatName">Unresolved</div>
+                <div class="actualStat" id="ActualStat">23</div>
+            </div>
+            <div class="statImage" id="statImage" style='background-image: url("../../assets/img/stat3.png");'></div>
+        </div>
+        <div class="examsStat" id="ExamsStat">
+            <div class="statContent" id="StatContent">
+                <div class="statName" id="StatName">Unchecked</div>
+                <div class="actualStat" id="ActualStat">13</div>
+            </div>
+            <div class="statImage" id="statImage" style='background-image: url("../../assets/img/stat4.png");'></div>
+        </div>
+    </div>
+    <div class="examNavigation" id="ExamNavigation">
+        <div class="tabContainer" id="TabContainer">
+            <div class="examsTabs" id="examsTabs" style="display: flex;">
+                <mat-tab-group [disableRipple]="true" mat-align-tabs="start" class="examGroups">
+                    <mat-tab label="All exams"><app-active-exams></app-active-exams></mat-tab>
+                    <mat-tab label="Active">Overview Content</mat-tab>
+                    <mat-tab label="Inactive">Overview Content</mat-tab>
+                    <input matInput placeholder="Search">
+                </mat-tab-group>
+            </div>
+        </div>
+    </div>
+</div>
